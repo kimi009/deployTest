@@ -1,0 +1,158 @@
+/*胡淼：列表页空白模板全局样式设置--start*/
+.page-box {
+  font-size: 12px;
+  .page-content {
+    background-color: #fff;
+    box-shadow: 0px 2px 8px 0px rgba(33, 76, 217, 0.2);
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px;
+    min-height: calc(100vh - 148px); /*delete by zjj */
+    height: calc(100vh - 148px);
+    overflow: auto;
+  }
+}
+
+.page-filter, .page-table.page-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  .filter-item-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .filter-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      width: 160px;
+      .filter-reset {
+        padding: 0;
+        .icon-filter-reset {
+          font-size: 28px;
+          color: #717075;
+          &:hover {
+            color: #3369FF;
+          }
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.filter-search {
+        width: 64px;
+        flex: none;
+      }
+      .el-select,
+      .el-input {
+        // width: 100%; 打包后会有覆盖问题
+      }
+    }
+  }
+  .filter-btn {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.page-table {
+  .blank-table.el-table {
+    font-size: 12px;
+    .el-table__body {
+      tr {
+        height: 42px;
+        line-height: 42px;
+        td {
+          padding: 0 0;
+        }
+      }
+    }
+  }
+}
+
+.page-paging {
+  margin-top: 16px;
+  text-align: right;
+  .el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev {
+    background-color: transparent;
+  }
+  .el-pagination.is-background .el-pager {
+    height: 28px;
+    line-height: 28px;
+    .more:before {
+      line-height: 20px;
+    }
+    li {
+      vertical-align: middle;
+      vertical-align: -webkit-baseline-middle;
+      border-radius: 50%;
+      min-width: auto;
+      min-height: auto;
+      height: 20px;
+      line-height: 20px;
+      width: 20px;
+      font-size: 12px;
+      background-color: transparent;
+      &.active {
+        background-color: #3369FF;
+      }
+    }
+  }
+}
+
+.el-icon-search {
+  cursor: pointer;
+}
+
+/*列表页全局样式设置--end*/
+/* 原样显示文本，解决内部空格只显示一个的问题 */
+.white-space-pre {
+  white-space: pre;
+}
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* 阴影卡片 */
+.card-box {
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(33, 76, 217, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* 详细信息页面公共样式 */
+.detail-title {
+  font-size: 14px;
+  color: #212A40;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*flex布局常用css */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-box.template-box {
+  .page-filter .filter-item-box .diyWidth {
+    width: 260px;
+    .el-select {
+      width: 110px;
+    }
+  }
+  .page-warp {
+    height: calc(100% - 72px);
+    overflow-y: auto;
+  }
+}
